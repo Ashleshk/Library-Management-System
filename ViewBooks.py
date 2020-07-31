@@ -40,5 +40,22 @@ def View():
         newImageSizeHeight = int(imageSizeHeight/n)
     
     
+    Canvas1 = Canvas(root)
+    
+    Canvas1.config(bg="#F8EFBA",width = newImageSizeWidth, height = newImageSizeHeight)
+    Canvas1.pack(expand=True,fill=BOTH)
+        
+    labelFrame = Frame(root,bg='black')
+    labelFrame.place(relx=0.1,rely=0.3,relwidth=0.8,relheight=0.5)
+        
+    headingFrame1 = Frame(root,bg="#333945",bd=5)
+    headingFrame1.place(relx=0.25,rely=0.1,relwidth=0.5,relheight=0.13)
+        
+    headingFrame2 = Frame(headingFrame1,bg="#EAF0F1")
+    headingFrame2.place(relx=0.01,rely=0.05,relwidth=0.98,relheight=0.9)
+        
+    headingLabel = Label(headingFrame2, text="VIEW BOOKs", fg='black')
+    headingLabel.place(relx=0.25,rely=0.15, relwidth=0.5, relheight=0.5)   
+    
     
     root.mainloop()
