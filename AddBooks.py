@@ -111,11 +111,7 @@ def addBooks():
     en4.place(relx=0.3,rely=0.55, relwidth=0.62)
         
     # Book Status
-    lb5 = Label(labelFrame,text="Status(Avail/issued) : ", bg='black', fg='white')
-    lb5.place(relx=0.05,rely=0.75)
-        
-    en5 = Entry(labelFrame)
-    en5.place(relx=0.3,rely=0.75, relwidth=0.62)
+    
         
     #Submit Button
     SubmitBtn = Button(root,text="SUBMIT",bg='#d1ccc0', fg='black',command=bookRegister)
