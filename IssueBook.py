@@ -189,7 +189,11 @@ def issueBook():
     en1.place(relx=0.3,rely=0.2, relwidth=0.62)
     
     # Issued To Roll Number 
-    
+    lb2 = Label(labelFrame,text="Issued To(rollno) : ", bg='black', fg='white')
+    lb2.place(relx=0.05,rely=0.4)
+        
+    en2 = Entry(labelFrame)
+    en2.place(relx=0.3,rely=0.4, relwidth=0.62)
     
     # Issued By Employee Number
     lb3 = Label(labelFrame,text="Issued By(empid) : ", bg='black', fg='white')
