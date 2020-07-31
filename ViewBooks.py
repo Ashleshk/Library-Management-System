@@ -57,5 +57,18 @@ def View():
     headingLabel = Label(headingFrame2, text="VIEW BOOKs", fg='black')
     headingLabel.place(relx=0.25,rely=0.15, relwidth=0.5, relheight=0.5)   
     
+    y = 0.25
+    
+    Label(labelFrame, text="%-10s%-30s%-20s%-30s%-20s"%('BID','Title','Subject','Author','Status'),bg='black',fg='white').place(relx=0.07,rely=0.1)
+    Label(labelFrame, text="----------------------------------------------------------------------------",bg='black',fg='white').place(relx=0.05,rely=0.2)
+    getBooks = "select * from "+bookTable
+    try:
+        cur.execute(getBooks)
+        con.commit()
+        for i in cur:
+            Label(labelFrame, text="%-10s%-30s%-20s%-30s%-20s"%(i[0],i[1],i[2],i[3],i[4]),bg='black',fg='white').place(relx=0.07,rely=y)
+            y += 0.1
+    except:
+        messagebox.showinfo("Bad Format","Can't fetch files from database")
     
     root.mainloop()
